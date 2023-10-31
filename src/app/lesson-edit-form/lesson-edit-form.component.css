@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <label for="title">Title</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="title" [(ngModel)]="lessonPackage.title" name="title">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <label for="description">Description</label>
+    </div>
+    <div class="col-md-9">
+      <textarea id="description" [(ngModel)]="lessonPackage.description" name="description"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <label for="category">Category</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="category" [(ngModel)]="lessonPackage.category" name="category">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <label for="level">Level</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="level" [(ngModel)]="lessonPackage.level" name="level">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <label for="prerequisite">Prerequisite</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="prerequisite" [(ngModel)]="lessonPackage.prerequisite" name="prerequisite">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <label for="tags">Tags</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="tags" [(ngModel)]="lessonPackage.tags" name="tags">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <label for="copyright">Copyright</label>
+    </div>
+    <div class="col-md-9">
+      <input type="text" id="copyright" [(ngModel)]="lessonPackage.copyright" name="copyright">
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

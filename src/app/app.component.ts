@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LessonPackage } from './lesson-edit-form/lesson-package.model';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,15 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     console.log('AppComponent.ngOnInit()');
   }
+
+  lessonPackage: LessonPackage = {
+    title: '',
+    description: '',
+    category: '',
+    level: '',
+    prerequisite: [],
+    tags: [],
+    copyright: ''
+  };
   
 }
