@@ -17,6 +17,10 @@ export class AppComponent implements OnInit{
     console.log('AppComponent.ngOnInit()');
   }
 
+  ngOnDestroy(): void {
+    console.log('AppComponent.ngOnDestroy()');
+  }
+
   lessonPackage: LessonPackage = {
     title: '',
     description: '',

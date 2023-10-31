@@ -9,13 +9,17 @@ import { LessonPackage } from './lesson-edit-form/lesson-package.model';
 import { LessonEditFormComponent } from './lesson-edit-form/lesson-edit-form.component';
 import { LessonSearchPageComponent } from './lesson-search-page/lesson-search-page.component';
 import { MenuNavBarComponent } from './menu-nav-bar/menu-nav-bar.component';
+import { LessonListPageComponent } from './lesson-list-page/lesson-list-page.component';
+import { LessonDetailPageComponent } from './lesson-detail-page/lesson-detail-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LessonEditFormComponent,
     LessonSearchPageComponent,
-    MenuNavBarComponent
+    MenuNavBarComponent,
+    LessonListPageComponent,
+    LessonDetailPageComponent
   ],
   imports: [
     BrowserModule,
