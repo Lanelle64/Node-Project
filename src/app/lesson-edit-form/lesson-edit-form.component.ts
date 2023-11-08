@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LessonPackage } from './lesson-package.model';
 import {Router} from "@angular/router";
+import {UserSettingsService} from "../user-settings.service";
 
 @Component({
   selector: 'app-lesson-edit-form',
@@ -9,9 +10,10 @@ import {Router} from "@angular/router";
 })
 export class LessonEditFormComponent {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private userSettingsService: UserSettingsService) {}
   onClickSubmit() {
   // could execute code (send save request to server)... then navigate
+  this.userSettingsService.lastLessonId = 1234;
   this.router.navigate(['/lesson-list-page']).then(res => {});
   }
   lessonPackage: LessonPackage = {
