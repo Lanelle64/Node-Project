@@ -11,6 +11,7 @@ The [node_module] folder must be added or generated in the base folder for it to
 Run `npm start` from the [frontend-angular] folder or run `npm --prefix frontend-angular start` from the source folder. 
 Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+If it doesn't work, make sure that you have concurrently (`npm install -g concurrently`)
 
 ## Build
 
