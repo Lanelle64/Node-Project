@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,7 @@ import { TestPage1Component } from './test-page1/test-page1.component';
 import { NumberDisplayComponent } from './number-display/number-display.component';
 import { NumberStepsComponent } from './number-steps/number-steps.component';
 import { NumberEditComponent } from './number-edit/number-edit.component';
+import { FlashcardsComponent } from './flashcards/flashcards.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import { NumberEditComponent } from './number-edit/number-edit.component';
     TestPage1Component,
     NumberDisplayComponent,
     NumberStepsComponent,
-    NumberEditComponent
+    NumberEditComponent,
+    FlashcardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule, 
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],

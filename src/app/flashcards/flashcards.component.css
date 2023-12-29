@@ -1,0 +1,21 @@
+/* src/app/flashcards/flashcards.component.css */
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .question {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .answer {
+    margin-top: 10px;
+    color: #555;
+  }
+  
