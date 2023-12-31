@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { LessonPackage } from './lesson-edit-form/lesson-package.model';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +9,8 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit{
   title = 'td3';
   
-  constructor(private router: Router) {
+  constructor() {
     console.log('AppComponent.constructor()');
-  }
-
-  isHomePage(): boolean {
-    return this.router.url === '/';
   }
 
   ngOnInit(): void {
