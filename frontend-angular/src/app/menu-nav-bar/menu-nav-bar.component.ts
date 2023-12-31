@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-nav-bar.component.css']
 })
 export class MenuNavBarComponent {
-
+  
+    constructor() { }
+   
 }
