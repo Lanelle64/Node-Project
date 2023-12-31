@@ -1,52 +1,35 @@
+<!-- app.component.html -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-  <a class="navbar-brand" href="#"><i class="fas fa-home"></i>    Home</a>
-  <a class="dropdown-item" routerLink="/test-page1">Test Page1</a>
-  <a class="dropdown-item" routerLink="/flashcards">Flashcards</a>
-  <ul class="navbar-nav mr-auto">
-  <li ngbDropdown class="nav-item">
-    <a ngbDropdownToggle id="navbarMenu1" class="nav-link dropdowntoggle" role="button">
-      Menu1
+    <a class="navbar-brand" routerLink="/"><i class="fas fa-home"></i> Home</a>
+
+    <!-- Add links for existing components -->
+    <a class="dropdown-item" routerLink="/test-page1">Test Page1</a>
+    <a class="dropdown-item" routerLink="/flashcards">Flashcards</a>
+
+    <!-- Menu1 Dropdown -->
+    <li ngbDropdown class="nav-item">
+      <a ngbDropdownToggle id="navbarMenu1" class="nav-link dropdowntoggle" role="button">
+        Menu1
       </a>
       <div ngbDropdownMenu aria-labelledby="navbarMenu1" class="dropdownmenu">
-      <a class="dropdown-item" routerLink="/lesson-search-page">Lesson Search
-     Page...</a>
+        <a class="dropdown-item" routerLink="/lesson-search-page">Lesson Search Page...</a>
       </div>
-  </li>
-  <li ngbDropdown class="nav-item">
-  <a ngbDropdownToggle id="navbarMenu2" class="nav-link dropdowntoggle" role="button">
-  Menu2
-  </a>
-  <div ngbDropdownMenu aria-labelledby="navbarMenu2" class="dropdownmenu">
-  <a class="dropdown-item" routerLink="/lesson-edit-form">Lesson Edit
- Form...</a>
-  </div>
-  </li>
-  </ul>
-  </div>
- </nav>
+    </li>
 
- <div class="container" *ngIf="isHomePage()">
-  <h1>Home Page</h1>
+    <!-- Menu2 Dropdown -->
+    <li ngbDropdown class="nav-item">
+      <a ngbDropdownToggle id="navbarMenu2" class="nav-link dropdowntoggle" role="button">
+        Menu2
+      </a>
+      <div ngbDropdownMenu aria-labelledby="navbarMenu2" class="dropdownmenu">
+        <a class="dropdown-item" routerLink="/lesson-edit-form">Lesson Edit Form...</a>
+      </div>
+    </li>
 
-  Welcome to the home page! <br>
-  Please navigate to the other pages using the navigation bar above.<br>
-  <br> 
-  Or click on the links below to go to the other pages:
-  <ul>
-  <li><a routerLink="/flashcards">Flashcards</a></li>
-  </ul><br>
-  <br>
-  Here are the pages from the TDs:
-  <ul>
-  <li><a routerLink="/test-page1">Test Page1</a></li>
-  <li><a routerLink="/lesson-search-page">Lesson Search Page</a></li>
-  <li><a routerLink="/lesson-edit-form">Lesson Edit Form</a></li>
-  </ul>
-  <br><br>
-  Creators of this Node Project:<br>
-  Martin Liger<br>
-  Emma Kilbertus<br>
-  Raphael Michon<br>
- </div>
- <router-outlet></router-outlet>
+    <!-- New links for the ChartComponent and GridComponent -->
+    <a class="dropdown-item" routerLink="/chart">Chart</a>
+    <a class="dropdown-item" routerLink="/grid">Grid</a>
+  </div>
+</nav>
+<router-outlet></router-outlet>
