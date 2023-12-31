@@ -1,21 +1,34 @@
 /* src/app/flashcards/flashcards.component.css */
 
 .card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-  
-  .question {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .answer {
-    margin-top: 10px;
-    color: #555;
-  }
-  
+  position: relative;
+  border: 2px solid #3498db;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.card:hover {
+  border-color: #e74c3c;
+}
+
+.question {
+  font-weight: bold;
+  color: #333;
+}
+
+.answer {
+  margin-top: 15px;
+  color: #555;
+}
+
+.btn-delete {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  min-width: 50px;
+  height: 30px;
+}

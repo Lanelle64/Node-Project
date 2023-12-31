@@ -1,0 +1,16 @@
+<div class="container">
+    <form [formGroup]="flashcardForm" (ngSubmit)="onSubmit()">
+      <div class="row mt-2">
+        <label class="col-md-1" for="question">Question</label>
+        <input id="question" type="text" class="col-md-5" formControlName="question">
+      </div>
+      <div class="row mt-2">
+        <label class="col-md-1" for="answer">Answer</label>
+        <textarea id="answer" class="col-11" rows="4" formControlName="answer"></textarea>
+      </div>
+      <div class="row mt-2">
+        <label class="col-md-2"></label>
+        <button type="button" class="btn btn-primary col-md-2" (click)="onSubmit()" [disabled]="!flashcardForm.valid">Submit</button>
+      </div>
+    </form>
+  </div>  

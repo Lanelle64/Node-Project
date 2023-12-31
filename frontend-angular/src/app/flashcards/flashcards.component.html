@@ -2,10 +2,12 @@
   <div class = "row">
     <div class = "col-md-12">
       <h1>Flashcards</h1>
-      <div *ngFor = "let card of flashcards" class = "card">
-        <div class = "question">{{ card.question }}</div>
-        <div class = "answer">{{ card.answer }}</div>
+      <div *ngFor="let card of flashcards; let i = index" class="card" (click)="toggleAnswer(card)">
+        <div class="question">{{ card.question }}</div>
+        <div class="answer" [hidden]="!card.showAnswer">{{ card.answer }}</div>
+        <button class="btn btn-danger btn-sm btn-delete" (click)="deleteFlashcard(card)">Delete</button>
       </div>
+      <a routerLink="/flashcard-add"><button class="btn btn-primary btn-sm btn-add">Add</button></a>
     </div>
   </div>
   

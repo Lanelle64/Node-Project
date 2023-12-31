@@ -21,6 +21,10 @@ import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { GridComponent } from './components/grid/grid.component';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { FlashcardAddComponent } from './flashcard-add/flashcard-add.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     FlashcardsComponent,
     ChartComponent,
     GridComponent,
+    FlashcardAddComponent,
+    StatisticsComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +52,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
     HttpClientModule,
     ReactiveFormsModule,
     HighchartsChartModule,
+    AgGridModule,
   ],
   providers: [],
   bootstrap: [AppComponent] 

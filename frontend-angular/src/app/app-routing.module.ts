@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LessonEditFormComponent } from './lesson-edit-form/lesson-edit-form.component';
 import { LessonSearchPageComponent } from './lesson-search-page/lesson-search-page.component';
-import {LessonListPageComponent} from "./lesson-list-page/lesson-list-page.component";
-import {LessonDetailPageComponent} from "./lesson-detail-page/lesson-detail-page.component";
-import {TestPage1Component} from "./test-page1/test-page1.component";
-import {MenuNavBarComponent} from "./menu-nav-bar/menu-nav-bar.component";
+import { LessonListPageComponent } from "./lesson-list-page/lesson-list-page.component";
+import { LessonDetailPageComponent } from "./lesson-detail-page/lesson-detail-page.component";
+import { TestPage1Component } from "./test-page1/test-page1.component";
+import { MenuNavBarComponent } from "./menu-nav-bar/menu-nav-bar.component";
 import { FlashcardsComponent } from './flashcards/flashcards.component';
-import { ChartComponent } from './components/chart/chart.component';
+import { ChartComponent } from './components/chart/chart.component'; 
 import { GridComponent } from './components/grid/grid.component';
+import { FlashcardAddComponent } from './flashcard-add/flashcard-add.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path:'flashcards', component: FlashcardsComponent },
   { path: 'chart', component: ChartComponent },
   { path: 'grid', component: GridComponent },
+  { path: 'flashcard-add', component: FlashcardAddComponent },
+  { path: 'statistics', component: StatisticsComponent },
 ];
 
 @NgModule({

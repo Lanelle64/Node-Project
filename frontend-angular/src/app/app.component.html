@@ -28,28 +28,39 @@
  </nav>
 
  <div class="container" *ngIf="isHomePage()">
-  <h1>Home Page</h1>
+  <h1 class="my-4">Home Page</h1>
 
-  Welcome to the home page! <br>
-  Please navigate to the other pages using the navigation bar above.<br>
+  <div class="welcome-message">
+    Welcome to the home page! Please navigate to the other pages using the navigation bar above.<br>
+  </div>
   <br> 
-  Or click on the links below to go to the other pages:
-  <ul>
-  <li><a routerLink="/flashcards">Flashcards</a></li>
-  <li><a routerLink="/chart">Chart</a></li>
-  <li><a routerLink="/grid">Grid</a></li>
-  </ul><br>
+  <div class="quick-links">
+    <h2>Quick Links:</h2>
+    <ul>
+      <li><a routerLink="/flashcards">Flashcards</a></li>
+      <li><a routerLink="/flashcard-add">Add Flashcard</a></li>
+      <li><a routerLink="/statistics">Statistics</a></li><br>
+      <li><a routerLink="/chart">Chart</a></li>
+      <li><a routerLink="/grid">Grid</a></li>
+    </ul>
+  </div>
   <br>
-  Here are the pages from the TDs:
-  <ul>
-  <li><a routerLink="/test-page1">Test Page1</a></li>
-  <li><a routerLink="/lesson-search-page">Lesson Search Page</a></li>
-  <li><a routerLink="/lesson-edit-form">Lesson Edit Form</a></li>
-  </ul>
+  <div class="td-pages">
+    <h2>Pages from the TDs:</h2>
+    <ul>
+      <li><a routerLink="/test-page1">Test Page 1</a></li>
+      <li><a routerLink="/lesson-search-page">Lesson Search Page</a></li>
+      <li><a routerLink="/lesson-edit-form">Lesson Edit Form</a></li>
+    </ul>
+  </div>
   <br><br>
-  Creators of this Node Project:<br>
-  Martin Liger<br>
-  Emma Kilbertus<br>
-  Raphael Michon<br>
- </div>
+  <div class="creators">
+    <h2>Creators of this Node Project:</h2>
+    <ul>
+      <li>Martin Liger</li>
+      <li>Emma Kilbertus</li>
+      <li>Raphael Michon</li>
+    </ul>
+  </div> 
+</div>
  <router-outlet></router-outlet>

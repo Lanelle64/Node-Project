@@ -1,0 +1,53 @@
+.navbar-brand {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+  }
+  
+  .dropdown-item {
+    padding: 8px 16px; /* Add padding to the dropdown items */
+  }
+  
+  .nav-link {
+    cursor: pointer; /* Change cursor to pointer for better UX */
+  }
+  
+  .dropdownmenu {
+    border: 1px solid #ccc; /* Add border to dropdown menu */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .my-4 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .welcome-message {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .quick-links,
+  .td-pages,
+  .creators {
+    margin-bottom: 3rem;
+  }
+  
+  .quick-links h2,
+  .td-pages h2,
+  .creators h2 {
+    font-size: 1.5rem;
+  }
+  
+  .quick-links ul,
+  .td-pages ul,
+  .creators ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .quick-links li,
+  .td-pages li,
+  .creators li {
+    margin-bottom: 1rem;
+  }

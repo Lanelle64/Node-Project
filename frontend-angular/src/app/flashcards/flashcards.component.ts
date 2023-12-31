@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FlashcardService } from '../flashcard.service';
 
 @Component({
   selector: 'app-flashcards',
@@ -9,12 +10,20 @@ import { HttpClient } from '@angular/common/http';
 export class FlashcardsComponent implements OnInit {
   flashcards: any[] = [];
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private flashcardService: FlashcardService) {}
 
-  ngOnInit(): void {
-    this.httpClient.get<any[]>('http://localhost:3000/api/flashcards').subscribe(data => {
-      this.flashcards = data;
+  ngOnInit() {
+    this.flashcardService.flashcards$.subscribe((flashcards) => {
+      this.flashcards = flashcards;
     });
   }
-}
 
+  toggleAnswer(card: any) {
+    card.showAnswer = !card.showAnswer;
+  }
+
+  deleteFlashcard(flashcard: any): void {
+    const updatedFlashcards = this.flashcards.filter((card) => card !== flashcard);
+    this.flashcardService.updateFlashcards(updatedFlashcards);
+  }
+}
