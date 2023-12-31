@@ -18,10 +18,6 @@ import { NumberDisplayComponent } from './number-display/number-display.componen
 import { NumberStepsComponent } from './number-steps/number-steps.component';
 import { NumberEditComponent } from './number-edit/number-edit.component';
 import { FlashcardsComponent } from './flashcards/flashcards.component';
-import { ChartComponent } from './components/chart/chart.component';
-import { GridComponent } from './components/grid/grid.component';
-import { HighchartsChartModule } from 'highcharts-angular'; // Import HighchartsChartModule
-
 
 @NgModule({
   declarations: [
@@ -35,9 +31,7 @@ import { HighchartsChartModule } from 'highcharts-angular'; // Import Highcharts
     NumberDisplayComponent,
     NumberStepsComponent,
     NumberEditComponent,
-    FlashcardsComponent,
-    ChartComponent,
-    GridComponent,
+    FlashcardsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,8 +39,7 @@ import { HighchartsChartModule } from 'highcharts-angular'; // Import Highcharts
     NgbModule,
     FormsModule, 
     HttpClientModule,
-    ReactiveFormsModule,
-    HighchartsChartModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent] 
