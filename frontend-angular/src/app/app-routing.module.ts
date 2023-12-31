@@ -7,6 +7,9 @@ import {LessonDetailPageComponent} from "./lesson-detail-page/lesson-detail-page
 import {TestPage1Component} from "./test-page1/test-page1.component";
 import {MenuNavBarComponent} from "./menu-nav-bar/menu-nav-bar.component";
 import { FlashcardsComponent } from './flashcards/flashcards.component';
+import { ChartComponent } from './components/chart/chart.component';
+import { GridComponent } from './components/grid/grid.component';
+
 
 const routes: Routes = [
  { path:'lesson-edit-form', component: LessonEditFormComponent },
@@ -15,7 +18,9 @@ const routes: Routes = [
   { path:'lesson/:id', component: LessonDetailPageComponent },
   { path:'test-page1', component: TestPage1Component },
   { path:'menu-nav-bar', component: MenuNavBarComponent },
-  { path:'flashcards', component: FlashcardsComponent }
+  { path:'flashcards', component: FlashcardsComponent },
+  { path: 'chart', component: ChartComponent },
+  { path: 'grid', component: GridComponent },
 ];
 
 @NgModule({

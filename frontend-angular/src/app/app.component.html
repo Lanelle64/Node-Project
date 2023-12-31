@@ -1,16 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
   <a class="navbar-brand" href="#"><i class="fas fa-home"></i>    Home</a>
-  <a class="dropdown-item" routerLink="/test-page1">Test Page1</a>
+  <a class="dropdown-item"> </a>
   <a class="dropdown-item" routerLink="/flashcards">Flashcards</a>
+  <a class="dropdown-item" routerLink="/chart">Chart</a>
+  <a class="dropdown-item" routerLink="/grid">Grid</a>
   <ul class="navbar-nav mr-auto">
   <li ngbDropdown class="nav-item">
     <a ngbDropdownToggle id="navbarMenu1" class="nav-link dropdowntoggle" role="button">
       Menu1
       </a>
       <div ngbDropdownMenu aria-labelledby="navbarMenu1" class="dropdownmenu">
-      <a class="dropdown-item" routerLink="/lesson-search-page">Lesson Search
-     Page...</a>
+      <a class="dropdown-item" routerLink="/test-page1">Test Page1</a>
       </div>
   </li>
   <li ngbDropdown class="nav-item">
@@ -18,8 +19,8 @@
   Menu2
   </a>
   <div ngbDropdownMenu aria-labelledby="navbarMenu2" class="dropdownmenu">
-  <a class="dropdown-item" routerLink="/lesson-edit-form">Lesson Edit
- Form...</a>
+  <a class="dropdown-item" routerLink="/lesson-edit-form">Lesson Edit Form...</a>
+  <a class="dropdown-item" routerLink="/lesson-search-page">Lesson Search Page...</a>
   </div>
   </li>
   </ul>
@@ -35,6 +36,8 @@
   Or click on the links below to go to the other pages:
   <ul>
   <li><a routerLink="/flashcards">Flashcards</a></li>
+  <li><a routerLink="/chart">Chart</a></li>
+  <li><a routerLink="/grid">Grid</a></li>
   </ul><br>
   <br>
   Here are the pages from the TDs:
