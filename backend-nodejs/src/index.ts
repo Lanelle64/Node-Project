@@ -8,11 +8,8 @@ const port = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-const flashcards = [
-  { question: 'What is Node.js?', answer: 'A JavaScript runtime built on Chrome\'s V8 JavaScript engine.' },
-  { question: 'What is Angular?', answer: 'A web application framework.' },
-  // Add more flashcards as needed
-];
+
+const flashcards = require('./flashcards.json');
 
 app.get('/api/flashcards', (req, res) => {
   res.json(flashcards);

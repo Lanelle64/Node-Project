@@ -1,43 +1,49 @@
 // chart.component.ts
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
-import { HighchartsChartModule } from 'highcharts-angular'; // Import HighchartsChartModule
+import { HighchartsChartModule } from 'highcharts-angular'; 
+import { HttpClient } from '@angular/common/http';
+import { FlashcardService } from '../../flashcard.service';
 
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.css']
 })
-export class ChartComponent {
+
+export class ChartComponent implements OnInit {
   Highcharts: typeof Highcharts = Highcharts;
+  
+  //get the flashcards from the flashcard service
+  flashcards: any[] = this.flashcardService.getFlashcards();
+  constructor(private flashcardService: FlashcardService) {}
 
   chartOptions: Highcharts.Options = {
     chart: {
       type: 'bar'
     },
     title: {
-      text: 'Fruit Consumption'
+      text: 'Number of Flashcards'
     },
     xAxis: {
-      categories: ['Apples', 'Bananas', 'Cherries']
+      categories: ['Flashcards']
     },
     yAxis: {
       title: {
-        text: 'Fruit eaten'
+        text: 'Number of Flashcards'
       }
     },
     series: [
       {
-        name: 'Jane',
-        data: [1, 0, 4]
-      },
-      {
-        name: 'John',
-        data: [5, 7, 3]
-      }
-    ] as Highcharts.SeriesOptionsType[]
+        type: 'bar',  // Add the type property
+        name: 'Number of Flashcards',
+        data: [this.flashcards.length]
+      } as Highcharts.SeriesOptionsType
+    ]
   };
+
+  ngOnInit(): void {
+    console.log('Flashcards:', this.flashcards);
+    console.log('Chart Options:', this.chartOptions);
+  }
 }
-
-
-

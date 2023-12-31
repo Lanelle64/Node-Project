@@ -10,12 +10,14 @@ import { FlashcardService } from '../flashcard.service';
 export class FlashcardsComponent implements OnInit {
   flashcards: any[] = [];
 
-  constructor(private flashcardService: FlashcardService) {}
+  constructor(private httpClient: HttpClient, private flashcardService: FlashcardService) {}
 
-  ngOnInit() {
-    this.flashcardService.flashcards$.subscribe((flashcards) => {
-      this.flashcards = flashcards;
-    });
+  ngOnInit(): void {
+    this.httpClient.get<any[]>('http://localhost:3000/api/flashcards').subscribe(data => {
+      this.flashcards = data;
+      this.flashcardService.updateFlashcards(data);
+    }
+    );
   }
 
   toggleAnswer(card: any) {

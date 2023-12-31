@@ -10,7 +10,17 @@ export class FlashcardService {
   flashcards$ = this.flashcardsSubject.asObservable();
 
   constructor() {
-    this.loadFlashcards();
+    this.addDefaultFlashcards();
+  }
+
+  private addDefaultFlashcards(): void {
+    const defaultFlashcards = [
+      { question: 'Is the sky blue?', answer: 'Yes', showAnswer: false },
+    ];
+
+    const currentFlashcards = this.flashcardsSubject.getValue();
+    const newFlashcards = [...currentFlashcards, ...defaultFlashcards];
+    this.flashcardsSubject.next(newFlashcards);
   }
 
   private saveFlashcards(flashcards: any[]): void {
@@ -24,6 +34,7 @@ export class FlashcardService {
   }
 
   getFlashcards(): any[] {
+    this.loadFlashcards();
     return this.flashcardsSubject.getValue();
   }
 
@@ -31,6 +42,7 @@ export class FlashcardService {
     const currentFlashcards = this.getFlashcards();
     const newFlashcards = [...currentFlashcards, flashcard];
     this.flashcardsSubject.next(newFlashcards);
+    // Save updated flashcards to localStorage
     this.saveFlashcards(newFlashcards);
   }
 

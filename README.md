@@ -2,33 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
 
-The `node_module` folder must be added or generated in the base folder for it to work. 
-Please refer to this schema:
+Home Menu:
+![Alt text](image.png)
 
-project-root/
+Flashcards:
+![Alt text](image-1.png)
 
-|-- backend-nodejs/
+Adding a new Flashcard:
+![Alt text](image-2.png)
 
-|   |-- src/
+Grid:
+![Alt text](image-3.png)
 
-|-- frontend-angular/
+Statistics:
+![Alt text](image-4.png)
 
-|   |-- src/
-
-|-- node_modules/
-
-|-- ...
-
-## Development server
-
-### IMPORTANT: You MUST use `npm start` and not `ng serve`, as `npm start` will run both frontend and backend.
-
-Run `npm start` from the `frontend-angular` folder or run `npm --prefix frontend-angular start` from the source folder. 
-
-Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-If it doesn't work, make sure that you have concurrently (`npm install -g concurrently`)
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Terminal with localhost running:
+![Alt text](image-6.png)
