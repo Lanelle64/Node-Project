@@ -2,7 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
 
-The [node_module] folder must be added or generated in the base folder for it to work.
+The [node_module] folder must be added or generated in the base folder for it to work. 
+Please refer to this schema:
+
+project-root/
+|-- backend-nodejs/
+|   |-- src/
+|-- frontend-angular/
+|   |-- src/
+|-- node_modules/
+|-- ...
 
 ## Development server
 
